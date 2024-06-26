@@ -1,0 +1,382 @@
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Italianno&family=Outfit:wght@300;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1A2A33;
+  text-transform: uppercase;
+  font-family: Outfit;
+  padding: 100px 160px 150px 150px;
+}
+
+#toppart {
+  width: 457px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 95px; 
+  margin-bottom: 10px;
+}
+
+#toppart div {
+  text-align: center;
+}
+
+#deMessage {
+  color: #A8BFC9;
+  width: 100px; /* Adjusted width for rectangle */
+  height: 40px;
+  font-family: Outfit;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background: #1F3641;
+  box-shadow: 0px -4px 0px 0px #10212A inset;
+  position: relative;  
+}
+
+#deMessage div {
+  display: inline-flex;
+  padding: 10px;
+  align-items: center;
+}
+
+#Restart {
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  background: #A8BFC9;
+  box-shadow: 0px -4px 0px 0px #6B8997 inset;
+}
+
+
+#Restart svg {
+  width: 20px;
+  height: 20px;
+}
+#Restart:hover {
+  background: #DBE8ED; 
+  box-shadow: 0px -4px 0px 0px #6B8997 inset;
+}
+
+
+.container {
+  text-align: center;
+  width: 460px;
+  height: 461px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+/* #icon-x,
+#icon-o {
+  position: absolute;  
+  z-index: 1;         
+} */
+
+.col-xs-4 {
+  position: relative;  
+  z-index: 0;          
+  margin: 5px;
+  text-align: center;
+  font-size: 100px;
+  cursor: pointer;
+  width: 140px;
+  height: 140px;
+  border-radius: 15px;
+  background: #1F3641;
+  box-shadow: 0px -8px 0px 0px #10212A inset;
+}
+
+
+
+
+
+
+
+.scoreboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.scoreboard div:nth-child(n + 2) {
+  width: 250px;
+  height: 72px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  color:  #1A2A33;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal; 
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing:1px;
+}
+
+#X,
+#tiesScore,
+#O {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#X .score,
+#tiesScore .score,
+#O .score {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+
+#X {
+background:  #31C3BD;
+}
+#tiesScore{
+  background:  #A8BFC9;
+}
+#O{
+  border-radius: 15px;
+  background:  #F2B137;
+}
+
+
+#computerMessage,
+#winMessage,
+#popupMessage,
+#tieMessage
+{
+  display: inline-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  background-color: #1F3641;
+  z-index: 99;
+  overflow-y: auto;
+  width: 100%;
+  height: 266px;
+}
+#popupMessage,
+#tieMessage{
+  color: #A8BFC9;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.5px;
+}
+
+#computerMessage p:first-child,
+#winMessage{
+  margin-top: 1px; 
+  margin-bottom: 1px;
+  color: #a8bfc9;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+#computerMessage{
+  color: #f2b137;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  /* margin-top: 2px; */
+  
+}
+#winMessage {
+  color: #31C3BD;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+} 
+
+#nextRoundButton,
+#nextRoundComputer,
+#nextRoundTie,
+#confirmRestart
+{
+  width: 146px;
+  height: 52px;
+  color: #1A2A33;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #f2b137;
+  border-radius: 10px;
+  box-shadow: 0px -4px 0px 0px #cc8b13 inset;
+}
+#nextRoundButton:hover,
+#nextRoundComputer:hover,
+#nextRoundTie:hover,
+#confirmRestart:hover {
+  background: #FFE860; 
+  box-shadow: 0px -8px 0px 0px #CC8B13 inset;
+}
+#quitWin,
+#quitComputer,
+#quitTie{
+  width: 76px;
+  height: 52px;
+  color: #1A2A33;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #a8bfc9;
+  border-radius: 15px;
+  box-shadow: 0px -4px 0px 0px #6b8997 inset;
+
+}
+#quitComputer:hover,
+#quitWin:hover,
+#quitTie:hover {
+  background: #DBE8ED; 
+  box-shadow: 0px -4px 0px 0px #6b8997 inset;
+}
+
+#cancel{
+  color: #1A2A33;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  width: 146px;
+  height: 52px;
+  background: #a8bfc9;
+  border-radius: 10px;
+  box-shadow: 0px -4px 0px 0px #6b8997 inset;
+
+}
+#cancel:hover {
+  background: #DBE8ED; 
+  box-shadow: 0px -4px 0px 0px #6B8997 inset;
+}
+
+.winning-cell-o {
+  background-color: #f2b137;
+}
+
+.winning-cell-x {
+  background-color: #31C3BD;
+}
+
+/* Media query for phones with width <= 360px and height <= 800px */
+@media only screen and (max-width: 360px) and (max-height: 800px) {
+  body{
+    display: flex;
+    width: 300px;
+    padding: 24px 23px 127px 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #toppart {
+    flex-direction: row;
+    gap: 30px;
+    width: 428px;
+    height: 40px;
+  }
+  #toppart div {
+    width: auto;
+  }
+
+  #Restart {
+    width: 40px;
+    height: 40px;
+  }
+
+  .col-xs-4 {
+    width: 96px;
+    height: 96px;
+    font-size: medium;
+  }
+
+  .scoreboard div {
+    width: 70px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  #computerMessage,
+  #winMessage,
+  #popupMessage,
+  #tieMessage {
+    width: 100%;
+    height: 40%;
+  
+  }
+
+  #computerMessage p:first-child,
+#winMessage{
+  margin-bottom: 10px;
+  color: #a8bfc9;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0.8px;
+}
+#computerMessage{
+  color: #f2b137;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+}
+
+/* Media query for tablets with width >= 768px and width <= 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet styles */
+ 
+  #computerMessage,
+  #winMessage,
+  #popupMessage,
+  #tieMessage {
+    width: 100%;
+    height: 30%;
+  
+  }
+}
